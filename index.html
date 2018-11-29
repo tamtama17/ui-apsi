@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <title>TheEvent - Bootstrap Event Template</title>
+  <title>Ternaknesia</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
+  <link href="img/ternaknesia.ico" rel="icon">
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -20,6 +20,7 @@
 
   <!-- Libraries CSS Files -->
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/venobox/venobox.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -51,7 +52,9 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="#intro">Home</a></li>
+          <li class="menu-active"><a href="#intro">Beranda</a></li>
+          <li><a href="#">Produk</a></li>
+          <li><a href="#">Tentang kami</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#speakers">Speakers</a></li>
           <li><a href="#schedule">Schedule</a></li>
@@ -60,7 +63,20 @@
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#sponsors">Sponsors</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li class="buy-tickets"><a href="#buy-tickets">Buy Tickets</a></li>
+          <li><a data-toggle="dropdown" href="#"><i class="fas fa-user"></i></a>
+            <div class="dropdown-menu" style="background-color: #0e1b4d; color: white; padding: 1rem; width: 200px;">
+              <form>
+                <div  class="form-group" style="padding: 0.2rem;">
+                  <input class="form-control" style="padding: 0.5rem;" type="" name="username" placeholder="username">
+                </div>
+                <div  class="form-group" style="padding: 0.2rem;">
+                  <input class="form-control" style="padding: 0.5rem;" type="password" name="password" placeholder="password">
+                </div>
+                <center style="padding: 0.2rem;"><input class="btn btn-primary btn-sm" style="padding: 0.2rem;" type="submit" name="login" value="Masuk"></center>
+              </form>
+              <a class="btn btn-link" href="#" style="padding: 0;">Belum punya akun?</a>
+            </div>
+          </li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
