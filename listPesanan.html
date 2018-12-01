@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ternaknesia</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/ternaknesia.ico" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/venobox/venobox.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+
+
+  <!-- =======================================================
+    Theme Name: TheEvent
+    Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
+        <a href="#intro" class="scrollto"><img src="img/logo.png" alt="" title=""></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="index.html">Beranda</a></li>
+          <li class="menu-active"><a href="#hotels">Produk</a></li>
+          <li><a href="about.html">Tentang kami</a></li>
+
+          <li><a data-toggle="dropdown" href="#"><i class="fas fa-user"></i></a>
+            <div class="dropdown-menu" style="background-color: #0e1b4d; color: white; padding: 1rem; width: 200px;">
+              <form>
+                <div  class="form-group" style="padding: 0.2rem;">
+                  <input id="email" class="form-control" style="padding: 0.5rem;" type="text" name="email" placeholder="email">
+                </div>
+                <div  class="form-group" style="padding: 0.2rem;margin-bottom:5px;">
+                  <input id="password" class="form-control" style="padding: 0.5rem;" type="password" name="password" placeholder="password">
+                </div>
+                <button id="login" type="button" class="btn btn-primary btn-block">Login</button>
+                <button id="loading" type="button" class="btn btn-primary btn-block"><i class='fa fa-spinner fa-spin '></i> Loading</button>
+              </form>
+              <a class="btn btn-link" href="register.html" style="padding: 0;">Belum punya akun?</a>
+            </div>
+          </li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+<main id="main">
+  <section id="intro" style="height:150vh;">
+    <h1 style="position: center;color: white;text-align: center;margin-top: 80px;text-decoration-color: white;">Daftar Pesanan</h1>
+  <div class="container rounded" style="background-color: white; padding: 10px;margin-top: 2%;">
+    <div class="container rounded" style="background-color: #2c3e50;padding: 8px; color: white">
+      <div class="row">
+
+        <div class="row" style="margin: 5px;">
+        <div class="col-md-2">
+          <img class="img-thumbnail float-left" src="img/susu.png"> </div>
+        <div class="col-md-6">
+          <h3 style="color: white;">SUSU SEGAR</h3>
+          <p class="text-justify">SUSU UHT</p> 
+          <form action="" method="post">
+          <button id="batal" value="<?php echo $row['post_id'];?>" type="submit" class="btn btn-danger" style="padding:0px 10 0px 10px;">Batalkan Pesanan</button>
+          <button id="konfirmasi" value="<?php echo $row['post_id'];?>" type="submit" class="btn btn-success" style="padding:0px 10 0px 10px; margin-left: 20px;">Konfirmasi Pembayaran</button>
+          </form>
+        </div>
+
+        <div class="col-md-2 panel panel-default">
+          <table class="table" style="border-radius: 6px;">
+            <thead class="thead-light" style="text-align: center;">
+              <tr><th>Jumlah</th></tr>
+            </thead>
+            <tbody class="bg-warning" style="color: black; font-weight: 600;">
+              <tr><td>2</td></tr>
+            </tbody>
+          </table></div>
+        <div class="col-md-2">
+          <table class="table">
+            <thead class="thead-light" style="text-align: center;">
+              <tr><th>Total Biaya</th></tr>
+            </thead>
+            <tbody class="bg-warning" style="color: black; font-weight: 600;">
+              <tr rows="3"><td>Rp. 144.000,-</td></tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ini page navigation harus diedit lagi  -->
+    <nav aria-label="Page navigation" style="margin-bottom: 10%;margin-top: 10px;"> 
+      <ul class="pagination justify-content-center">
+        <li><a class="page-link" href="evelist.php?page=1">First</a></li>
+        <li><a class="page-link" href="evelist.php?page=<?php echo $link_prev; ?>">&laquo;</a></li>
+
+        <li class="page-item"><a class="page-link" href="evelist.php?page=<?php echo $i; ?>">1</a></li>
+
+        <li><a class="page-link" href="evelist.php?page=<?php echo $link_next; ?>">&raquo;</a></li>
+        <li><a class="page-link" href="evelist.php?page=<?php echo $jumlah_page; ?>">Last</a></li>
+      </ul>
+    </nav>
+</div>
+      </div>
+  </section>
+</main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-6 footer-info" style="text-align:justify;">
+            <img src="img/logo.png" alt="TheEvenet">
+            <p>Ternaknesia adalah sebuah Gerakan. Gerakan untuk memajukan peternakan Indonesia dan mewujudkan ketahanan pangan Indonesia.
+              Ternaknesia mengajak semakin banyak orang untuk terlibat dalam gerakan ini,
+              untuk bersama-sama berkontribusi membangun peternakan indonesia dan kedaulatan pangan bangsa.
+            </div>
+          <div class="col-md-3 footer-contact">
+            <h4>Hubungi Kami</h4>
+            <p>
+              Jl. Teknik Kimia <br>
+              Surabaya, Indonesia<br>
+              Teknik Informatika ITS <br>
+              <strong>Telepon:</strong> 081 324555789<br>
+              <strong>Email:</strong> ternaknesia@ternaknesia.com<br>
+            </p>
+
+            <div class="social-links">
+              <a href="https://twitter.com/ternaknesia?lang=en" class="twitter"><small><b>tw</b></small></a>
+              <a href="https://web.facebook.com/ternaknesia/?_rdc=1&_rdr" class="facebook"><small><b>fb</b></small></a>
+              <a href="https://www.instagram.com/ternaknesia/?hl=en" class="instagram"><small><b>ig</b></small></a>
+              <a href="https://www.instagram.com/ternaknesia/?hl=en" class="google-plus"><small><b>g+</b></small></a>
+              <a href="https://www.instagram.com/ternaknesia/?hl=en" class="linkedin"><small><b>ln</b></small></a>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Ternaknesia</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
+        -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/venobox/venobox.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/sweetalert.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+</body>
+
+<script type="text/javascript">
+  $( "#batal" ).click(function() {
+    swal("Batalkan Pesanan ?","Apakah Anda Yakin Membatalkan Pesanan?","error");
+
+  });
+  $( "#ya" ).click(function() {
+    swal("Pembatalan Sukses","Pesanan Berhasil Di-BATAL-kan","success");
+    redirect = "$(location).attr('href','listPesanan.html')";
+    window.setTimeout( redirect, 1000 );
+  });
+  $( "#konfirmasi" ).click(function() {
+    redirect = "$(location).attr('href','listPesanan.html')";
+    window.setTimeout( redirect, 1000 );
+
+  });
+
+  $("#loading").hide();
+  $( "#login" ).click(function() {
+    $("#login").hide();
+    $("#loading").show();
+    if ($('#email').val() == "peternak@peternak" && $('#password').val() == "peternak") {
+      redirect = "$(location).attr('href','indexPeternak.html')";
+      window.setTimeout( redirect, 1000 );
+    }
+    else if ($('#email').val() != "" && $('#password').val() != "") {
+      redirect = "$(location).attr('href','indexPelanggan.html')";
+      window.setTimeout( redirect, 1000 );
+    }else {
+      notif = 'swal("Login gagal","password atau username salah","error")';
+      window.setTimeout( notif,1000 );
+      setTimeout(function() {
+        $("#loading").hide();
+        $("#login").show();
+      },1000);
+    }
+  });
+</script>
+
+</html>
