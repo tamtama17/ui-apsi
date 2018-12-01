@@ -19,14 +19,15 @@
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/venobox/venobox.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+
 
   <!-- =======================================================
     Theme Name: TheEvent
@@ -54,9 +55,9 @@
         <ul class="nav-menu">
           <li><a href="index.html">Beranda</a></li>
           <li><a href="#">Produk</a></li>
-          <li class="menu-active"><a href="about.html">Tentang kami</a></li>
+          <li><a href="about.html">Tentang kami</a></li>
 
-          <li><a data-toggle="dropdown" href="#"><i class="fas fa-user"></i></a>
+          <li class="menu-active"><a data-toggle="dropdown" href="#"><i class="fas fa-user"></i></a>
             <div class="dropdown-menu" style="background-color: #0e1b4d; color: white; padding: 1rem; width: 200px;">
               <form>
                 <div  class="form-group" style="padding: 0.2rem;">
@@ -65,7 +66,7 @@
                 <div  class="form-group" style="padding: 0.2rem;">
                   <input class="form-control" style="padding: 0.5rem;" type="password" name="password" placeholder="password">
                 </div>
-                <input class="btn btn-primary btn-sm" style="padding: 0.2rem;margin:8px;" type="submit" name="login" value="Masuk"></center>
+                <input class="btn btn-primary btn-sm" style="padding: 0.2rem;margin:8px;" type="submit" name="login" value="Masuk">
               </form>
               <a class="btn btn-link" href="register.html" style="padding: 0;">Belum punya akun?</a>
             </div>
@@ -75,21 +76,43 @@
     </div>
   </header><!-- #header -->
 
-  <!--==========================
-    Intro Section
-  ============================-->
-  <section id="intro">
+<main id="main">
+  <section id="intro" style="height:120vh;">
     <div class="intro-container wow fadeIn">
-      <img src="img/logoclr.png" alt="">
-      <p class="mb-4 pb-0" style="text-align:justify;padding:20px 250px;">
-        Ternaknesia hadir sebagai bentuk solusi dari permasalahan pangan dan peternakan Indonesia.
-        Potensi kebutuhan pangan Indonesia yang begitu besar tidak diimbangi dengan kemampuan supply yang memadai dari peternakan Indonesia.
-        Dengan bantuan teknologi dan semangat berbagi, ternaknesia turut berkontribusi untuk memberikan solusi.
-        Sampai saat ini, Ternaknesia telah menghubungkan beberapa titik stakeholder di seluruh nusantara.
-        Jaringan mitra peternak ternaknesia telah menjangkau wilayah Jawa, sebagian di Sumatra dan Nusa Tenggara dan akan semakin luas kedepannya.
-      </p>
-    </div>
+        <div class="row main" style="text-align:left;">
+          <div class="main-login"  style="background-color:white;padding:25px;width:500px;">
+            <h5 style="text-align:center;"><b>Login Ternaknesia</b></h5>
+              <form class="" method="post" action="">
+                <div class="form-group">
+                  <label for="email" class="cols-sm-2 control-label">Email</label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                    </div>
+                    <input id="email" autocomplete="off" required type="text" name="email" class="form-control" placeholder="email anda" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="password" class="cols-sm-2 control-label">Password</label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1"><i class="fa fa-lock fa" aria-hidden="true"></i></span>
+                    </div>
+                    <input id="password" required type="password" name="password" class="form-control" placeholder="password" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                </div>
+                <div class="form-group ">
+                  <button id="login" type="button" class="btn btn-success btn-lg btn-block">Login</button>
+                  <button id="loading" type="button" class="btn btn-success btn-lg btn-block"><i class='fa fa-spinner fa-spin '></i> Loading</button>
+                </div>
+
+              </form>
+  </div>
+</div>
+      </div>
   </section>
+</main>
 
   <!--==========================
     Footer
@@ -116,11 +139,11 @@
             </p>
 
             <div class="social-links">
-              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+              <a href="#" class="twitter"><small><b>tw</b></small></a>
+              <a href="#" class="facebook"><small><b>fb</b></small></a>
+              <a href="#" class="instagram"><small><b>ig</b></small></a>
+              <a href="#" class="google-plus"><small><b>g+</b></small></a>
+              <a href="#" class="linkedin"><small><b>ln</b></small></a>
             </div>
 
           </div>
@@ -165,5 +188,28 @@
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
 </body>
+
+<script type="text/javascript">
+  $("#loading").hide();
+  $( "#login" ).click(function() {
+    $("#login").hide();
+    $("#loading").show();
+    if ($('#email').val() != "peternak@peternak" && $('password').val() != "peternak") {
+      redirect = "$(location).attr('href','indexPeternak.html')";
+      window.setTimeout( redirect, 1000 );
+    }
+    else if ($('#email').val() != "" && $('password').val() != "") {
+      redirect = "$(location).attr('href','indexPelanggan.html')";
+      window.setTimeout( redirect, 1000 );
+    }else {
+      notif = 'swal("Login gagal","password atau username salah","error")';
+      window.setTimeout( notif,1000 );
+      setTimeout(function() {
+        $("#loading").hide();
+        $("#login").show();
+      },1000);
+    }
+  });
+</script>
 
 </html>
