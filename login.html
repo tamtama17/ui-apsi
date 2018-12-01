@@ -54,19 +54,20 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li><a href="index.html">Beranda</a></li>
-          <li><a href="#">Produk</a></li>
+          <li><a href="#hotels">Produk</a></li>
           <li><a href="about.html">Tentang kami</a></li>
 
           <li class="menu-active"><a data-toggle="dropdown" href="#"><i class="fas fa-user"></i></a>
             <div class="dropdown-menu" style="background-color: #0e1b4d; color: white; padding: 1rem; width: 200px;">
               <form>
                 <div  class="form-group" style="padding: 0.2rem;">
-                  <input class="form-control" style="padding: 0.5rem;" type="" name="username" placeholder="username">
+                  <input id="email" class="form-control" style="padding: 0.5rem;" type="text" name="email" placeholder="email">
                 </div>
-                <div  class="form-group" style="padding: 0.2rem;">
-                  <input class="form-control" style="padding: 0.5rem;" type="password" name="password" placeholder="password">
+                <div  class="form-group" style="padding: 0.2rem;margin-bottom:5px;">
+                  <input id="password" class="form-control" style="padding: 0.5rem;" type="password" name="password" placeholder="password">
                 </div>
-                <input class="btn btn-primary btn-sm" style="padding: 0.2rem;margin:8px;" type="submit" name="login" value="Masuk">
+                <button id="login" type="button" class="btn btn-primary btn-block">Login</button>
+                <button id="loading" type="button" class="btn btn-primary btn-block"><i class='fa fa-spinner fa-spin '></i> Loading</button>
               </form>
               <a class="btn btn-link" href="register.html" style="padding: 0;">Belum punya akun?</a>
             </div>
@@ -194,11 +195,11 @@
   $( "#login" ).click(function() {
     $("#login").hide();
     $("#loading").show();
-    if ($('#email').val() != "peternak@peternak" && $('password').val() != "peternak") {
+    if ($('#email').val() == "peternak@peternak" && $('#password').val() == "peternak") {
       redirect = "$(location).attr('href','indexPeternak.html')";
       window.setTimeout( redirect, 1000 );
     }
-    else if ($('#email').val() != "" && $('password').val() != "") {
+    else if ($('#email').val() != "" && $('#password').val() != "") {
       redirect = "$(location).attr('href','indexPelanggan.html')";
       window.setTimeout( redirect, 1000 );
     }else {
