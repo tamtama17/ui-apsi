@@ -79,80 +79,58 @@
 
 <main id="main">
   <section id="intro" style="height:150vh;">
-    <div class="intro-container wow fadeIn">
-        <div class="row main" style="text-align:left;">
-          <div class="main-login"  style="background-color:white;padding:25px;width:500px;">
-            <h5 style="text-align:center;"><b>Pemesanan Produk</b></h5>
-            <div style="width: 100%; text-align: center;">
-              <!-- gambar sesuai produk yg sebelumnya dipilih -->
-              <img src="img/susu.png" alt="Daging segar" style="width: 25%; align-content: center;">
-              <p style="align-content: center; color: brown;"><b>SUSU SEGAR</b></p>
-            </div>
-              <form class="" method="post" action="">
+    <h1 style="position: center;color: white;text-align: center;margin-top: 80px;text-decoration-color: white;">Daftar Pesanan</h1>
+  <div class="container rounded" style="background-color: white; padding: 10px;margin-top: 2%;">
+    <div class="container rounded" style="background-color: #2c3e50;padding: 8px; color: white">
+      <div class="row">
 
-                <div class="form-group">
-                  <!-- jenis produk sesuai generate produk yg sebelumnya dipilih -->
-                  <label for="jenis" class="cols-sm-2 control-label">Jenis Produk</label>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1"><i class="fa fa-barcode"></i></span>
-                    </div>
-                    <input required type="text" name="jenis" class="form-control" placeholder="Susu UHT" aria-label="Jenis" aria-describedby="basic-addon1" readonly="">
-                  </div>
-                </div>
+        <div class="row" style="margin: 5px;">
+        <div class="col-md-2">
+          <img class="img-thumbnail float-left" src="img/susu.png"> </div>
+        <div class="col-md-6">
+          <h3 style="color: white;">SUSU SEGAR</h3>
+          <p class="text-justify">SUSU UHT</p> 
+          <form action="" method="post">
+          <button id="batal" value="<?php echo $row['post_id'];?>" type="submit" class="btn btn-danger" style="padding:0px 10 0px 10px;">Batalkan Pesanan</button>
+          <button id="konfirmasi" value="<?php echo $row['post_id'];?>" type="submit" class="btn btn-success" style="padding:0px 10 0px 10px; margin-left: 20px;">Konfirmasi Pembayaran</button>
+          </form>
+        </div>
 
-                <div class="form-group">
-                  <label for="alamat" class="cols-sm-2 control-label">Alamat Tujuan</label>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1"><i class="fa fa-home"></i></span>
-                    </div>
-                    <input required type="text" name="alamat" class="form-control" placeholder="Alamat Lengkap" aria-label="Alamat" aria-describedby="basic-addon1">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="jumlah" class="cols-sm-2 control-label">Jumlah</label>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1"><i class="fa fa-cart-plus" aria-hidden="true"></i></span>
-                    </div>
-                    <input required type="number" value="0" min="0" step="1" name="jumlah" class="form-control" placeholder="Jumlah Produk" aria-label="Jumlah" aria-describedby="basic-addon1">
-                  </div>
-                </div>
-
-                <div style="width: 100%;">
-                  <p>_______________________________________________________</p>
-                  <table style="width: 100%; padding-top: 0; margin-top: 0;">
-                    <tbody>
-                      <tr>
-                        <td style="width: 30%;">Biaya Produk</td>
-                        <td style="width: 40%;">:</td>
-                        <td style="width: 1%;">Rp.</td>
-                        <td align="right">125.000,-</td>
-                      </tr>
-                      <tr>
-                        <td>Ongkir</td>
-                        <td>:</td>
-                        <td>Rp.</td>
-                        <td align="right">19.000,-</td>
-                      </tr>
-                      <tr>
-                        <td><b>Total Biaya</b></td>
-                        <td>:</td>
-                        <td>Rp.</td>
-                        <td align="right">144.000,-</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <div class="form-group " style="margin-top: 40px;margin-bottom: 40px;">
-                  <button id="pesan" type="button" class="btn btn-success btn-lg btn-block">Pesan</button>
-                </div>
-
-              </form>
+        <div class="col-md-2 panel panel-default">
+          <table class="table" style="border-radius: 6px;">
+            <thead class="thead-light" style="text-align: center;">
+              <tr><th>Jumlah</th></tr>
+            </thead>
+            <tbody class="bg-warning" style="color: black; font-weight: 600;">
+              <tr><td>2</td></tr>
+            </tbody>
+          </table></div>
+        <div class="col-md-2">
+          <table class="table">
+            <thead class="thead-light" style="text-align: center;">
+              <tr><th>Total Biaya</th></tr>
+            </thead>
+            <tbody class="bg-warning" style="color: black; font-weight: 600;">
+              <tr rows="3"><td>Rp. 144.000,-</td></tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <!-- ini page navigation harus diedit lagi  -->
+    <nav aria-label="Page navigation" style="margin-bottom: 10%;margin-top: 10px;"> 
+      <ul class="pagination justify-content-center">
+        <li><a class="page-link" href="evelist.php?page=1">First</a></li>
+        <li><a class="page-link" href="evelist.php?page=<?php echo $link_prev; ?>">&laquo;</a></li>
+
+        <li class="page-item"><a class="page-link" href="evelist.php?page=<?php echo $i; ?>">1</a></li>
+
+        <li><a class="page-link" href="evelist.php?page=<?php echo $link_next; ?>">&raquo;</a></li>
+        <li><a class="page-link" href="evelist.php?page=<?php echo $jumlah_page; ?>">Last</a></li>
+      </ul>
+    </nav>
 </div>
       </div>
   </section>
@@ -232,8 +210,16 @@
 </body>
 
 <script type="text/javascript">
-  $( "#pesan" ).click(function() {
-    swal("Pesanan Berhasil","Silahkan menyelesaikan pembayaran pemesanan","success");
+  $( "#batal" ).click(function() {
+    swal("Batalkan Pesanan ?","Apakah Anda Yakin Membatalkan Pesanan?","error");
+
+  });
+  $( "#ya" ).click(function() {
+    swal("Pembatalan Sukses","Pesanan Berhasil Di-BATAL-kan","success");
+    redirect = "$(location).attr('href','listPesanan.html')";
+    window.setTimeout( redirect, 1000 );
+  });
+  $( "#konfirmasi" ).click(function() {
     redirect = "$(location).attr('href','listPesanan.html')";
     window.setTimeout( redirect, 1000 );
 
