@@ -27,7 +27,38 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
+  <style type="text/css">
+    @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+    fieldset, label { margin: 0; padding: 0; }
+    .rating { 
+      border: none;
+      float: left;
+    }
+    .rating > input { display: none; } 
+    .rating > label:before { 
+      margin: 5px;
+      font-size: 1.25em;
+      font-family: FontAwesome;
+      display: inline-block;
+      content: "\f005";
+    }
+    .rating > .half:before { 
+      content: "\f089";
+      position: absolute;
+    }
+    .rating > label { 
+      color: #ddd; 
+     float: right; 
+    }
+    .rating > input:checked ~ label, /* show gold star when clicked */
+    .rating:not(:checked) > label:hover, /* hover current star */
+    .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
 
+    .rating > input:checked + label:hover, /* hover current star when changing rating */
+    .rating > input:checked ~ label:hover,
+    .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+    .rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+  </style>
 
   <!-- =======================================================
     Theme Name: TheEvent
@@ -78,7 +109,7 @@
   </header><!-- #header -->
 
 <main id="main">
-  <section id="intro" style="height:100vh;">
+  <section id="intro" style="height:110vh;">
     <div class="intro-container wow fadeIn">
         <div class="row main" style="text-align:left;">
           <div class="main-login"  style="background-color:white;padding:25px;width:500px;">
@@ -111,6 +142,21 @@
                   </div>
                 </div>
 
+                <div class="form-group">
+                  <label for="ulasan" class="cols-sm-2 control-label">Rating</label><br>
+                <fieldset class="rating">
+                  <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                  <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                  <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                  <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                  <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                  <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                  <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                  <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                  <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                  <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+              </fieldset>
+                </div>
                 <div class="form-group " style="margin-top: 40px;">
                   <button id="ulas" type="button" class="btn btn-success btn-lg btn-block">Ulas</button>
                 </div>
@@ -201,6 +247,10 @@
     redirect = "$(location).attr('href','produk.html')";
     window.setTimeout( redirect, 1000 );
 
+  });
+
+  $(':radio').change(function() {
+    console.log('New star rating: ' + this.value);
   });
 
   $("#loading").hide();
