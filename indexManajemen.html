@@ -59,7 +59,7 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="index.html">Beranda</a></li>
           <li><a href="#hotels">Produk</a></li>
-          <li><a data-toggle="dropdown" href="#">Halo Alam <i class="fas fa-user"></i></a>
+          <li><a data-toggle="dropdown" href="#">Halo Bos Tamtam <i class="fas fa-user"></i></a>
             <div class="dropdown-menu" style="background-color: #0e1b4d; color: white; padding: 1rem; width: 200px;">
               <a class="btn btn-link" href="profil.html" style="padding: 0;">Profil</a><br>
               <a class="btn btn-link" href="register.html" style="padding: 0;">Histori Pemesanan</a><br>
@@ -71,176 +71,77 @@
     </div>
   </header><!-- #header -->
 
-  <!--==========================
-    Intro Section
-  ============================-->
-  <section id="intro">
-    <div class="intro-container wow fadeIn">
-      <h1 class="mb-4 pb-0">Kesegaran<br><span>Nusantara</span> Dihadapanmu</h1>
-      <a href="https://www.youtube.com/watch?v=9Oh7AWiz8_M" class="venobox play-btn mb-4" data-vbtype="video"
-        data-autoplay="true"></a>
-      <a href="#about" class="about-btn scrollto">Tentang Ternakmart</a>
-    </div>
-  </section>
-
   <main id="main">
+      <section id="intro" style="height:900px;">
+    <div class="container wow fadeIn" style="margin-top:8%;">
+    	<div class="row">
+    		<div class="col-md-3 ">
+    		     <div class="list-group ">
+                  <a href="indexManajemen.html" class="list-group-item list-group-item-action active" style="background-color:#c3ddeb;border:#c3ddeb">Dashboard</a>
+                  <a href="manajemenPeternak.html" class="list-group-item list-group-item-action">Manajemen Akun Peternak</a>
+                  <a href="manajemenProduk.html" class="list-group-item list-group-item-action">Manajemen Produk</a>
+                  <a href="manejemenLaporan.html" class="list-group-item list-group-item-action">Buat Laporan</a>
 
-    <!--==========================
-      About Section
-    ============================-->
-    <section id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <h2>Ternakmart</h2>
-            <p>Platform digital jual-beli hasil peternakan langsung dari peternak.
-              Membuka pasar harian peternak dalam memasarkan produknya dan memudahkan
-              Anda untuk mendapatkan produk yang segar dari peternak Indonesia.</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!--==========================
-      Speakers Section
-    ============================-->
-    <section id="speakers" class="wow fadeInUp">
-      <div class="container">
-        <div class="section-header">
-          <h2>Mengapa Ternakmart ?</h2>
-          <p>Kami memberikan keunggulan yang berbeda daripada lainnya</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker">
-              <img class="mx-auto d-block" style="width:100px;height:120px;" src="img/01.png" alt="Speaker 1" class="img-fluid">
-              <div class="details">
-                <h3>Segar</h3>
-                <p>kesegaran produk terjaga langsung sejak dari peternakan lokal</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker">
-              <img class="mx-auto d-block" style="width:100px;height:120px;" src="img/02.png" alt="Speaker 1" class="img-fluid">
-              <div class="details">
-                <h3>Praktis</h3>
-                <p>Mekanisme pesan mudah dan produk akan langsung diantar ke lokasi tujuan</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker">
-              <img class="mx-auto d-block" style="width:100px;height:120px;" src="img/03.png" alt="Speaker 1" class="img-fluid">
-              <div class="details">
-                <h3>Pemberdayaan</h3>
-                <p>Turut berkontribusi dalam membantu memasarkan produk peternak lokal</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
-
-    <!--==========================
-      Hotels Section
-    ============================-->
-    <section id="hotels" class="section-with-bg wow fadeInUp">
-
-      <div class="container">
-        <div class="section-header">
-          <h2>Produk</h2>
-          <p>Produk unggulan yang kami tawarkan</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-6 col-md-6">
-            <div class="hotel">
-              <a href="produk.html">
-                <div class="hotel-img">
-                  <div class="row align-items-center" style="height: 250px;">
-                    <div class="col" style="height: 100%;">
-                      <img src="img/susu.png" alt="Daging segar" style="height: 100%; float: right;">
-                    </div>
-                    <div class="col section-header" style="padding: 0; margin: 0;">
-                      <h2>Susu<br>sapi</h2>
-                    </div>
-                  </div>
                 </div>
-              </a>
-            </div>
-          </div>
+    		</div>
+    		<div class="col-md-9">
+    		    <div class="card">
+    		        <div class="card-body">
+    		            <div class="row">
+    		                <div class="col-md-12">
+    		                    <h4>Dashboard Statistik</h4>
+    		                    <hr>
+    		                </div>
+    		            </div>
+    		            <div class="row">
+    		                <div class="col-md-12">
+    		                    <form>
+                                  <div class="form-group row">
+                                    <label for="username" class="col-4 col-form-label">Username</label>
+                                    <div class="col-8">
+                                      <input id="username" name="username" placeholder="Alamalam" class="form-control here" required="required" type="text">
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="name" class="col-4 col-form-label">Nama Lengkap</label>
+                                    <div class="col-8">
+                                      <input id="name" name="name" placeholder="Alam Cahya" class="form-control here" type="text">
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="email" class="col-4 col-form-label">Email*</label>
+                                    <div class="col-8">
+                                      <input id="email" name="email" placeholder="Email" class="form-control here" required="required" type="text">
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="publicinfo" class="col-4 col-form-label">Alamat</label>
+                                    <div class="col-8">
+                                      <textarea id="publicinfo" name="publicinfo" placeholder="Jalan Mawar Merah no 50 Sukasenang,Surabaya,Indonesia" cols="40" rows="4" class="form-control"></textarea>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="publicinfo" class="col-4 col-form-label">No Handphone</label>
+                                    <div class="col-8">
+                                      <input type="text" id="publicinfo" name="publicinfo" placeholder="08152358885"class="form-control"></input>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <div class="offset-4 col-8">
+                                      <button name="submit" type="submit" class="btn btn-primary">Update My Profile</button>
+                                    </div>
+                                  </div>
+                                </form>
+    		                </div>
+    		            </div>
 
-          <div class="col-lg-6 col-md-6">
-            <div class="hotel">
-              <a href="produk.html">
-                <div class="hotel-img">
-                  <div class="row align-items-center" style="height: 250px;">
-                    <div class="col" style="height: 100%;">
-                      <img src="img/daging.jpg" alt="Daging segar" style="height: 100%; float: right;">
-                    </div>
-                    <div class="col section-header" style="padding: 0; margin: 0;">
-                      <h2>Daging<br>Segar</h2>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
+    		        </div>
+    		    </div>
+    		</div>
+    	</div>
+    </div>
     </section>
-
-    <!--==========================
-      Contact Section
-    ============================-->
-    <section id="contact" class="section-bg wow fadeInUp">
-
-      <div class="container">
-
-        <div class="section-header">
-          <h2>Kontak kami</h2>
-          <p>Tetap terhubung dengan kami</p>
-        </div>
-
-        <div class="row contact-info">
-
-          <div class="col-md-4">
-            <div class="contact-address">
-              <i class="ion-ios-location-outline"></i>
-              <h3>Address</h3>
-              <address>Jl. Teknik Kimia
-              Surabaya, Indonesia
-              Teknik Informatika ITS </address>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="contact-phone">
-              <i class="ion-ios-telephone-outline"></i>
-              <h3>Telpon</h3>
-              <p>081 324555789</p>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="contact-email">
-              <i class="ion-ios-email-outline"></i>
-              <h3>Email</h3>
-              <p>ternaknesia@ternaknesia.com</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- #contact -->
-
   </main>
 
 

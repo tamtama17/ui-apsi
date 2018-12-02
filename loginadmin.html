@@ -54,24 +54,6 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li><a href="index.html">Beranda</a></li>
-          <li><a href="#hotels">Produk</a></li>
-          <li><a href="about.html">Tentang kami</a></li>
-
-          <li class="menu-active"><a data-toggle="dropdown" href="#"><i class="fas fa-user"></i></a>
-            <div class="dropdown-menu" style="background-color: #0e1b4d; color: white; padding: 1rem; width: 200px;">
-              <form>
-                <div  class="form-group" style="padding: 0.2rem;">
-                  <input id="emaill" class="form-control" style="padding: 0.5rem;" type="text" name="email" placeholder="email">
-                </div>
-                <div  class="form-group" style="padding: 0.2rem;margin-bottom:5px;">
-                  <input id="passwordd" class="form-control" style="padding: 0.5rem;" type="password" name="password" placeholder="password">
-                </div>
-                <button id="loginn" type="button" class="btn btn-primary btn-block">Login</button>
-                <button id="loadingg" type="button" class="btn btn-primary btn-block"><i class='fa fa-spinner fa-spin '></i> Loading</button>
-              </form>
-              <a class="btn btn-link" href="register.html" style="padding: 0;">Belum punya akun?</a>
-            </div>
-          </li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -82,7 +64,7 @@
     <div class="intro-container wow fadeIn">
         <div class="row main" style="text-align:left;">
           <div class="main-login"  style="background-color:white;padding:25px;width:500px;">
-            <h5 style="text-align:center;"><b>Login Ternaknesia</b></h5>
+            <h5 style="text-align:center;"><b>Login Admin Ternaknesia</b></h5>
               <form class="" method="post" action="">
                 <div class="form-group">
                   <label for="email" class="cols-sm-2 control-label">Email</label>
@@ -192,16 +174,11 @@
 
 <script type="text/javascript">
   $("#loading").hide();
-  $("#loading2").hide();
   $( "#login" ).click(function() {
     $("#login").hide();
     $("#loading").show();
-    if ($('#email').val() == "peternak@peternak" && $('#password').val() == "peternak") {
-      redirect = "$(location).attr('href','indexPeternak.html')";
-      window.setTimeout( redirect, 1000 );
-    }
-    else if ($('#email').val() != "" && $('#password').val() != "") {
-      redirect = "$(location).attr('href','indexPelanggan.html')";
+    if ($('#email').val() == "admin@admin" && $('#password').val() == "admin") {
+      redirect = "$(location).attr('href','indexManajemen.html')";
       window.setTimeout( redirect, 1000 );
     }else {
       notif = 'swal("Login gagal","password atau username salah","error")';
