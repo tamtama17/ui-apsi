@@ -111,11 +111,55 @@
                         </div>
                       </div>
                       <button id="addItem" type="button" class="btn btn-primary" style="margin-right:8px;">Tambah ke keranjang</button>
-                      <button type="submit" class="btn btn-success">Beli sekarang</button>
+                      <button type="button" data-toggle="modal" data-target="#exampleModalCenter"class="btn btn-success">Beli sekarang</button>
                     </form>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle"><b>Keranjang Anda</b></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table style="width: 100%; padding-top: 0; margin-top: 0;">
+                <tbody>
+                  <tr>
+                    <td style="width: 5%"></td>
+                    <td style="width: 15%;"></td>
+                    <td style="width: 30%;"><b>Nama Produk</b></td>
+                    <td style="width: 10%;"><b>Jumlah</b></td>
+                    <td style="width: 15%;"><b>Berat/Ukuran</b></td>
+                    <td align="right" style="width:15%"><b>Harga</b></td> <!-- harga tinggal ambil di query -->
+                  </tr>
+                  <tr>
+                    <td id="cancel" style="width: 5%"><i onMouseOver="this.style.color='#b92b27'"   onMouseOut="this.style.color='black'" class="fas fa-times"></i></td>
+                    <td style="width: 15%;"><img src="img/daging.jpg" width="80px" alt=""></td>
+                    <td style="width: 30%;">Daging Sapi Iga</td>
+                    <td style="width: 10%;">1</td>
+                    <td style="width: 15%;">250 gr</td>
+                    <td align="right" style="width: 15%">125.000,-</td> <!-- harga tinggal ambil di query -->
+                  </tr>
+                  <tr>
+                    <td colspan="5"><b>Total Pembayaran</b></td>
+                    <td align="right" style="width:15%"><b>Rp.125.000,-</b></td> <!-- harga tinggal ambil di query -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+              <a href="Checkout.html"><button type="button" class="btn btn-warning">Checkout</button>
+              </a>
             </div>
           </div>
         </div>
