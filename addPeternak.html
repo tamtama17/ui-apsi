@@ -57,7 +57,7 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="indexManajemen.html">Beranda</a></li>
+          <li class="menu-active"><a href="index.html">Beranda</a></li>
           <li><a data-toggle="dropdown" href="#">Halo Bos Tamtam <i class="fas fa-user"></i></a>
             <div class="dropdown-menu" style="background-color: #0e1b4d; color: white; padding: 1rem; width: 200px;">
               <a class="btn btn-link" href="indexManajemen.html" style="padding: 0;">Dashboard</a><br>
@@ -76,65 +76,68 @@
       <section id="intro" style="height:100%; padding: 2rem; padding-top: 1rem;">
     <div class="container wow fadeIn" style="margin-top:8%;">
     	<div class="row">
-    		<div class="col-md-3 ">
-    		     <div class="list-group ">
-                  <a href="indexManajemen.html" class="list-group-item list-group-item-action active" style="background-color:#c3ddeb;border:#c3ddeb">Dashboard</a>
-                  <a href="manajemenPeternak.html" class="list-group-item list-group-item-action">Manajemen Akun Peternak</a>
-                  <a href="manajemenProduk.html" class="list-group-item list-group-item-action">Manajemen Produk</a>
-                  <a href="manejemenLaporan.html" class="list-group-item list-group-item-action">Buat Laporan</a>
-
-
-                </div>
-    		</div>
-    		<div class="col-md-9">
+    		<div class="col-md-12">
     		    <div class="card">
     		        <div class="card-body">
     		            <div class="row">
     		                <div class="col-md-12">
-    		                    <h4>Dashboard Statistik</h4>
+    		                    <h4>Tambah Akun Peternak</h4>
     		                    <hr>
     		                </div>
     		            </div>
     		            <div class="row">
-    		                <div class="col-md-12">
+    		                <div class="col-md-6">
     		                    <form>
                                   <div class="form-group row">
-                                    <label for="username" class="col-4 col-form-label">Username</label>
+                                    <label for="username" class="col-4 col-form-label">Nama Pemilik</label>
                                     <div class="col-8">
-                                      <input id="username" name="username" placeholder="Alamalam" class="form-control here" required="required" type="text">
+                                      <input id="username" name="username" placeholder="Alam Cahya Nugraha" class="form-control here" required="required" type="text">
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="name" class="col-4 col-form-label">Nama Lengkap</label>
+                                    <label for="publicinfo" class="col-4 col-form-label">Nama Peternakan</label>
                                     <div class="col-8">
-                                      <input id="name" name="name" placeholder="Alam Cahya" class="form-control here" type="text">
+                                      <input type="text" id="publicinfo" name="publicinfo" placeholder="Ternak Alaya Sejahtera" class="form-control">
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="email" class="col-4 col-form-label">Email*</label>
+                                    <label for="name" class="col-4 col-form-label">Alamat</label>
                                     <div class="col-8">
-                                      <input id="email" name="email" placeholder="Email" class="form-control here" required="required" type="text">
+                                      <textarea id="publicinfo" name="publicinfo" placeholder="Jalan Mawar Merah no 50 Sukasenang,Surabaya,Indonesia" rows="2" class="form-control"></textarea>
                                     </div>
                                   </div>
-                                  <div class="form-group row">
-                                    <label for="publicinfo" class="col-4 col-form-label">Alamat</label>
-                                    <div class="col-8">
-                                      <textarea id="publicinfo" name="publicinfo" placeholder="Jalan Mawar Merah no 50 Sukasenang,Surabaya,Indonesia" cols="40" rows="4" class="form-control"></textarea>
-                                    </div>
-                                  </div>
-                                  <div class="form-group row">
-                                    <label for="publicinfo" class="col-4 col-form-label">No Handphone</label>
-                                    <div class="col-8">
-                                      <input type="text" id="publicinfo" name="publicinfo" placeholder="08152358885"class="form-control"></input>
-                                    </div>
-                                  </div>
-                                  <div class="form-group row">
-                                    <div class="offset-4 col-8">
-                                      <button name="submit" type="submit" class="btn btn-primary">Update My Profile</button>
-                                    </div>
-                                  </div>
-                                </form>
+                            </form>
     		                </div>
+                        <div class="col-md-6">
+    		                    <form>
+                                  <div class="form-group row">
+                                    <label for="email" class="col-4 col-form-label">No Telpon</label>
+                                    <div class="col-8">
+                                      <input id="email" name="email" placeholder="08152358885" class="form-control here" required="required" type="text">
+                                    </div>
+                                  </div>
+                              <div class="form-group row">
+                                <label for="publicinfo" class="col-4 col-form-label">Jumlah Sapi</label>
+                                <div class="col-4">
+                                  <input type="number" id="publicinfo" name="publicinfo" placeholder="300" class="form-control">
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="publicinfo" class="col-4 col-form-label">Jumlah Kambing</label>
+                                <div class="col-4">
+                                  <input type="number" id="publicinfo" name="publicinfo" placeholder="150" class="form-control">
+                                </div>
+                              </div>
+                            </form>
+    		                </div>
+                        <div class="col-md-12">
+                          <div class="form-group row">
+                            <div class="col-md-12 pull-left">
+                              <button id="submit" name="submit" type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+                              <button id="loading" type="button" class="btn btn-primary btn-lg btn-block"><i class='fa fa-spinner fa-spin '></i> Loading</button>
+                            </div>
+                          </div>
+                        </div>
     		            </div>
 
     		        </div>
@@ -221,24 +224,19 @@
 
 <script type="text/javascript">
 $("#loading").hide();
-$( "#login" ).click(function() {
-  $("#login").hide();
+
+$( "#submit" ).click(function() {
+
+  $("#submit").hide();
   $("#loading").show();
-  if ($('#email').val() == "peternak@peternak" && $('#password').val() == "peternak") {
-    redirect = "$(location).attr('href','indexPeternak.html')";
-    window.setTimeout( redirect, 1000 );
-  }
-  else if ($('#email').val() != "" && $('#password').val() != "") {
-    redirect = "$(location).attr('href','indexPelanggan.html')";
-    window.setTimeout( redirect, 1000 );
-  }else {
-    notif = 'swal("Login gagal","password atau username salah","error")';
-    window.setTimeout( notif,1000 );
-    setTimeout(function() {
-      $("#loading").hide();
-      $("#login").show();
-    },1000);
-  }
+
+  setTimeout(function() {
+    swal("Pendaftaran Berhasil","selamat pendaftaran mitra peternak telah berhasil","success");
+  },1000);
+
+  redirect = "$(location).attr('href','manajemenPeternak.html')";
+  window.setTimeout( redirect, 2000 );
+
 });
 </script>
 

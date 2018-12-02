@@ -47,7 +47,7 @@
       <div id="logo" class="pull-left">
         <!-- Uncomment below if you prefer to use a text logo -->
         <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
-        <a href="indexManajemen.html" class="scrollto"><img src="img/logo.png" alt="" title=""></a>
+        <a href="index.html" class="scrollto"><img src="img/logo.png" alt="" title=""></a>
       </div>
 
       <form class="form-inline active-cyan-3 active-cyan-4 pull-left" style="padding-left:40px;">
@@ -57,13 +57,12 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="indexManajemen.html">Beranda</a></li>
-          <li><a data-toggle="dropdown" href="#">Halo Bos Tamtam <i class="fas fa-user"></i></a>
+          <li class="menu-active"><a href="index.html">Beranda</a></li>
+          <li><a data-toggle="dropdown" href="#">Halo Yoshima <i class="fas fa-user"></i></a>
             <div class="dropdown-menu" style="background-color: #0e1b4d; color: white; padding: 1rem; width: 200px;">
-              <a class="btn btn-link" href="indexManajemen.html" style="padding: 0;">Dashboard</a><br>
-              <a class="btn btn-link" href="manajemenPeternak.html" style="padding: 0;">Akun Peternak</a><br>
-              <a class="btn btn-link" href="manajemenProduk.html" style="padding: 0;">Produk</a><br>
-              <a class="btn btn-link" href="manejemenLaporan.html" style="padding: 0;">Laporan</a><br>
+              <a class="btn btn-link" href="indexPeternak.html" style="padding: 0;">Profil</a><br>
+              <a class="btn btn-link" href="peternak_pesanan.html" style="padding: 0;">Pesanan</a><br>
+              <a class="btn btn-link" href="peternak_produk.html" style="padding: 0;">Produk</a><br>
               <a class="btn btn-link" href="index.html" style="padding: 0;">Logout</a><br>
             </div>
           </li>
@@ -78,12 +77,9 @@
     	<div class="row">
     		<div class="col-md-3 ">
     		     <div class="list-group ">
-                  <a href="indexManajemen.html" class="list-group-item list-group-item-action active" style="background-color:#c3ddeb;border:#c3ddeb">Dashboard</a>
-                  <a href="manajemenPeternak.html" class="list-group-item list-group-item-action">Manajemen Akun Peternak</a>
-                  <a href="manajemenProduk.html" class="list-group-item list-group-item-action">Manajemen Produk</a>
-                  <a href="manejemenLaporan.html" class="list-group-item list-group-item-action">Buat Laporan</a>
-
-
+                  <a href="indexPeternak.html" class="list-group-item list-group-item-action">Profil</a>
+                  <a href="peternak_pesanan.html" class="list-group-item list-group-item-action active" style="background-color:#c3ddeb;border:#c3ddeb">Pesanan<span style="float: right;">2</span></a>
+                  <a href="peternak_produk.html" class="list-group-item list-group-item-action">Produk</a>
                 </div>
     		</div>
     		<div class="col-md-9">
@@ -91,49 +87,68 @@
     		        <div class="card-body">
     		            <div class="row">
     		                <div class="col-md-12">
-    		                    <h4>Dashboard Statistik</h4>
+    		                    <h4>Pesanan</h4>
     		                    <hr>
     		                </div>
     		            </div>
     		            <div class="row">
     		                <div class="col-md-12">
-    		                    <form>
-                                  <div class="form-group row">
-                                    <label for="username" class="col-4 col-form-label">Username</label>
-                                    <div class="col-8">
-                                      <input id="username" name="username" placeholder="Alamalam" class="form-control here" required="required" type="text">
-                                    </div>
-                                  </div>
-                                  <div class="form-group row">
-                                    <label for="name" class="col-4 col-form-label">Nama Lengkap</label>
-                                    <div class="col-8">
-                                      <input id="name" name="name" placeholder="Alam Cahya" class="form-control here" type="text">
-                                    </div>
-                                  </div>
-                                  <div class="form-group row">
-                                    <label for="email" class="col-4 col-form-label">Email*</label>
-                                    <div class="col-8">
-                                      <input id="email" name="email" placeholder="Email" class="form-control here" required="required" type="text">
-                                    </div>
-                                  </div>
-                                  <div class="form-group row">
-                                    <label for="publicinfo" class="col-4 col-form-label">Alamat</label>
-                                    <div class="col-8">
-                                      <textarea id="publicinfo" name="publicinfo" placeholder="Jalan Mawar Merah no 50 Sukasenang,Surabaya,Indonesia" cols="40" rows="4" class="form-control"></textarea>
-                                    </div>
-                                  </div>
-                                  <div class="form-group row">
-                                    <label for="publicinfo" class="col-4 col-form-label">No Handphone</label>
-                                    <div class="col-8">
-                                      <input type="text" id="publicinfo" name="publicinfo" placeholder="08152358885"class="form-control"></input>
-                                    </div>
-                                  </div>
-                                  <div class="form-group row">
-                                    <div class="offset-4 col-8">
-                                      <button name="submit" type="submit" class="btn btn-primary">Update My Profile</button>
-                                    </div>
-                                  </div>
-                                </form>
+                          <div class="row">
+                            <div class="col-2">
+                              <b>No. Pesanan</b>
+                            </div>
+                            <div class="col-4">
+                              <b>Alamat</b>
+                            </div>
+                            <div class="col-4">
+                              <b>Kode Resi</b>
+                            </div>
+                            <div class="col">
+                              <b>Status</b>
+                            </div>
+                          </div>
+                          <div class="row" style="margin-top: 1rem;">
+                            <div class="col-2">
+                              0112180003
+                            </div>
+                            <div class="col-4">
+                              Wisma Permai 1 no.1, Mulyorejo, Surabaya
+                            </div>
+                            <div class="col-4">
+                              <input type="text" id="resi" name="resi" placeholder="Kode Resi" class="form-control">
+                            </div>
+                            <div class="col">
+                              <button type="submit" class="btn btn-primary">Kirim</button>
+                            </div>
+                          </div>
+                          <div class="row" style="margin-top: 1rem;">
+                            <div class="col-2">
+                              0112180001
+                            </div>
+                            <div class="col-4">
+                              Perumdos Blok J No.8, Sukolilo, Surabaya
+                            </div>
+                            <div class="col-4">
+                              <input type="text" id="resi" name="resi" placeholder="Kode Resi" class="form-control">
+                            </div>
+                            <div class="col">
+                              <button type="submit" class="btn btn-primary">Kirim</button>
+                            </div>
+                          </div>
+                          <div class="row" style="margin-top: 1rem;">
+                            <div class="col-2">
+                              2811180016
+                            </div>
+                            <div class="col-4">
+                              Ds. Sidowayah RT 06/ RW 03, Rembang
+                            </div>
+                            <div class="col-4">
+                              BKIG300538927726
+                            </div>
+                            <div class="col">
+                              Terkirim
+                            </div>
+                          </div>
     		                </div>
     		            </div>
 
