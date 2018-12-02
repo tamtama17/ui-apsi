@@ -80,9 +80,9 @@
     		<div class="col-md-3 ">
     		     <div class="list-group ">
                   <a href="indexManajemen.html" class="list-group-item list-group-item-action">Dashboard</a>
-                  <a href="manajemenPeternak.html" class="list-group-item list-group-item-action active" style="background-color:#c3ddeb;border:#c3ddeb">Manajemen Akun Peternak</a>
+                  <a href="manajemenPeternak.html" class="list-group-item list-group-item-action">Manajemen Akun Peternak</a>
                   <a href="manajemenProduk.html" class="list-group-item list-group-item-action">Manajemen Produk</a>
-                  <a href="manejemenLaporan.html" class="list-group-item list-group-item-action">Buat Laporan</a>
+                  <a href="manejemenLaporan.html" class="list-group-item list-group-item-action active" style="background-color:#c3ddeb;border:#c3ddeb">Buat Laporan</a>
 
 
                 </div>
@@ -92,44 +92,31 @@
     		        <div class="card-body">
     		            <div class="row">
     		                <div class="col-md-12">
-    		                    <h4>Manajemen Akun Peternak
-                                <button type="button" class="btn btn-outline-primary pull-right">+ Akun Peternak</button>
-                            </h4>
+    		                    <h4>Laporan Transaksi</h4>
     		                    <hr>
     		                </div>
     		            </div>
     		            <div class="row">
     		                <div class="col-md-12">
-                          <table class="table table-hover">
-                              <thead>
-                                <tr>
-                                  <th scope="col" width="5%">#</th>
-                                  <th scope="col" width="40%">Nama</th>
-                                  <th scope="col" width="30%">Nama Peternakan</th>
-                                  <th scope="col" width="25%">No Handphone</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <th scope="row">1</th>
-                                  <td>Yoshima Syach Putri</td>
-                                  <td>Kuikui Farmhouse</td>
-                                  <td>08123452728</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">2</th>
-                                  <td>Ibrahim Tamtama Adi</td>
-                                  <td>Tamajaya Farm</td>
-                                  <td>08147283729</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">3</th>
-                                  <td>Muhammad Alam Cahya</td>
-                                  <td>Ternak Alaya Sejahtera</td>
-                                  <td>08127572834</td>
-                                </tr>
-                              </tbody>
-                              </table>
+    		                    <form>
+                                  <div class="form-group row">
+                                    <label for="username" class="col-4 col-form-label">Tanggal Mulai</label>
+                                    <div class="col-8">
+                                      <input id="username" name="username" placeholder="Alamalam" class="form-control here" required="required" type="date">
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="name" class="col-4 col-form-label">Tanggal Selesai</label>
+                                    <div class="col-8">
+                                      <input id="name" name="name" placeholder="Alam Cahya" class="form-control here" type="date">
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <div class="offset-4 col-8">
+                                      <button name="submit" type="submit" class="btn btn-primary">Buat Laporan</button>
+                                    </div>
+                                  </div>
+                                </form>
     		                </div>
     		            </div>
 
