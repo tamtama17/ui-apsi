@@ -52,23 +52,20 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="#intro">Beranda</a></li>
+          <li class="menu-active"><a href="index.html">Beranda</a></li>
           <li><a href="produk.html">Produk</a></li>
-          <li><a href="about.html">Tentang kami</a></li>
-
-          <li><a data-toggle="dropdown" href="#"><i class="fas fa-user"></i></a>
+          <li><a data-toggle="dropdown" href="#">Halo Alam <i class="fas fa-user"></i></a>
             <div class="dropdown-menu" style="background-color: #0e1b4d; color: white; padding: 1rem; width: 200px;">
-              <form>
-                <div  class="form-group" style="padding: 0.2rem;">
-                  <input id="email" class="form-control" style="padding: 0.5rem;" type="text" name="email" placeholder="email">
-                </div>
-                <div  class="form-group" style="padding: 0.2rem;margin-bottom:5px;">
-                  <input id="password" class="form-control" style="padding: 0.5rem;" type="password" name="password" placeholder="password">
-                </div>
-                <button id="login" type="button" class="btn btn-primary btn-block">Login</button>
-                <button id="loading" type="button" class="btn btn-primary btn-block"><i class='fa fa-spinner fa-spin '></i> Loading</button>
-              </form>
-              <a class="btn btn-link" href="register.html" style="padding: 0;">Belum punya akun?</a>
+              <a class="btn btn-link" href="profil.html" style="padding: 0;">Profil</a><br>
+              <a class="btn btn-link" href="register.html" style="padding: 0;">Histori Pemesanan</a><br>
+              <a class="btn btn-link" href="register.html" style="padding: 0;">Logout</a><br>
+            </div>
+          </li>
+          <li><a data-toggle="dropdown"  href="#" id="keranjang"><i class="fas fa-shopping-cart"></i></a>
+            <div class="dropdown-menu" style="background-color: #0e1b4d; color: white; padding: 1rem; width: 200px;">
+              <a class="btn btn-link" href="profil.html" style="padding: 0;">Profil</a><br>
+              <a class="btn btn-link" href="register.html" style="padding: 0;">Histori Pemesanan</a><br>
+              <a class="btn btn-link" href="register.html" style="padding: 0;">Logout</a><br>
             </div>
           </li>
         </ul>
@@ -118,7 +115,7 @@
                           </div>
                         </div>
                       </div>
-                      <button type="button" class="btn btn-outline-success">Tambah ke Pesanan</button>
+                      <button id="addItem" type="button" class="btn btn-primary" style="margin-right:8px;">Tambah ke keranjang</button>
                       <button type="submit" class="btn btn-success">Beli sekarang</button>
                     </form>
                   </div>
@@ -220,6 +217,11 @@
           document.getElementById("stok").innerHTML = "6";
         }
     });
+
+    $('#addItem').click(function(){
+      $('#keranjang').html('<i class="fas fa-shopping-cart">1');
+    });
+
   </script>
 </body>
 
