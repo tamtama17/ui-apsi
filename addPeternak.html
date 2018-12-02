@@ -58,6 +58,7 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="index.html">Beranda</a></li>
+          <li><a href="#hotels">Produk</a></li>
           <li><a data-toggle="dropdown" href="#">Halo Bos Tamtam <i class="fas fa-user"></i></a>
             <div class="dropdown-menu" style="background-color: #0e1b4d; color: white; padding: 1rem; width: 200px;">
               <a class="btn btn-link" href="indexManajemen.html" style="padding: 0;">Dashboard</a><br>
@@ -74,62 +75,83 @@
 
   <main id="main">
       <section id="intro" style="height:900px;">
-    <div class="container" style="margin-top:8%;">
+    <div class="container wow fadeIn" style="margin-top:8%;">
     	<div class="row">
-    		<div class="col-md-3 ">
-    		     <div class="list-group ">
-                  <a href="indexManajemen.html" class="list-group-item list-group-item-action">Dashboard</a>
-                  <a href="manajemenPeternak.html" class="list-group-item list-group-item-action active" style="background-color:#c3ddeb;border:#c3ddeb">Manajemen Akun Peternak</a>
-                  <a href="manajemenProduk.html" class="list-group-item list-group-item-action">Manajemen Produk</a>
-                  <a href="manejemenLaporan.html" class="list-group-item list-group-item-action">Buat Laporan</a>
-
-
-                </div>
-    		</div>
-    		<div class="col-md-9 wow fadeIn">
+    		<div class="col-md-12">
     		    <div class="card">
     		        <div class="card-body">
     		            <div class="row">
     		                <div class="col-md-12">
-    		                    <h4>Manajemen Akun Peternak
-                                <a href="addPeternak.html"><button type="button" class="btn btn-outline-primary pull-right">+ Akun Peternak</button></a>
-                            </h4>
+    		                    <h4>Dashboard Statistik</h4>
     		                    <hr>
     		                </div>
     		            </div>
     		            <div class="row">
-    		                <div class="col-md-12">
-                          <table class="table table-hover">
-                              <thead>
-                                <tr>
-                                  <th scope="col" width="5%">#</th>
-                                  <th scope="col" width="40%">Nama</th>
-                                  <th scope="col" width="30%">Nama Peternakan</th>
-                                  <th scope="col" width="25%">No Handphone</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <th scope="row">1</th>
-                                  <td>Yoshima Syach Putri</td>
-                                  <td>Kuikui Farmhouse</td>
-                                  <td>08123452728</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">2</th>
-                                  <td>Ibrahim Tamtama Adi</td>
-                                  <td>Tamajaya Farm</td>
-                                  <td>08147283729</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">3</th>
-                                  <td>Muhammad Alam Cahya</td>
-                                  <td>Ternak Alaya Sejahtera</td>
-                                  <td>08127572834</td>
-                                </tr>
-                              </tbody>
-                              </table>
+    		                <div class="col-md-6">
+    		                    <form>
+                                  <div class="form-group row">
+                                    <label for="username" class="col-4 col-form-label">Nama Lengkap</label>
+                                    <div class="col-8">
+                                      <input id="username" name="username" placeholder="Alam Cahya Nugraha" class="form-control here" required="required" type="text">
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="name" class="col-4 col-form-label">Alamat</label>
+                                    <div class="col-8">
+                                      <input id="name" name="name" placeholder="Keputih Tegal Barat" class="form-control here" type="text">
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="email" class="col-4 col-form-label">No Handphone</label>
+                                    <div class="col-8">
+                                      <input id="email" name="email" placeholder="08152358885" class="form-control here" required="required" type="text">
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="publicinfo" class="col-4 col-form-label">Nama Peternakan</label>
+                                    <div class="col-8">
+                                      <input type="text" id="publicinfo" name="publicinfo" placeholder="Ternak Alaya Sejahtera"class="form-control"></input>
+                                    </div>
+                                  </div>
+
+                            </form>
     		                </div>
+                        <div class="col-md-6">
+    		                    <form>
+                              <div class="form-group row">
+                                <label for="publicinfo" class="col-4 col-form-label">Pemilik Ternak</label>
+                                <div class="col-8">
+                                  <input type="text" id="publicinfo" name="publicinfo" placeholder="Alam Cahya Nugraha"class="form-control"></input>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="publicinfo" class="col-4 col-form-label">Password</label>
+                                <div class="col-8">
+                                  <input type="password" id="publicinfo" name="publicinfo" placeholder="08152358885"class="form-control"></input>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="publicinfo" class="col-4 col-form-label">Jumlah Sapi</label>
+                                <div class="col-8">
+                                  <input type="text" id="publicinfo" name="publicinfo" placeholder="300"class="form-control"></input>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="publicinfo" class="col-4 col-form-label">Jumlah Kambing</label>
+                                <div class="col-8">
+                                  <input type="text" id="publicinfo" name="publicinfo" placeholder="150"class="form-control"></input>
+                                </div>
+                              </div>
+                            </form>
+    		                </div>
+                        <div class="col-md-12">
+                          <div class="form-group row">
+                            <div class="col-md-12 pull-left">
+                              <button id="submit" name="submit" type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+                              <button id="loading" type="button" class="btn btn-primary btn-lg btn-block"><i class='fa fa-spinner fa-spin '></i> Loading</button>
+                            </div>
+                          </div>
+                        </div>
     		            </div>
 
     		        </div>
@@ -216,24 +238,19 @@
 
 <script type="text/javascript">
 $("#loading").hide();
-$( "#login" ).click(function() {
-  $("#login").hide();
+
+$( "#submit" ).click(function() {
+
+  $("#submit").hide();
   $("#loading").show();
-  if ($('#email').val() == "peternak@peternak" && $('#password').val() == "peternak") {
-    redirect = "$(location).attr('href','indexPeternak.html')";
-    window.setTimeout( redirect, 1000 );
-  }
-  else if ($('#email').val() != "" && $('#password').val() != "") {
-    redirect = "$(location).attr('href','indexPelanggan.html')";
-    window.setTimeout( redirect, 1000 );
-  }else {
-    notif = 'swal("Login gagal","password atau username salah","error")';
-    window.setTimeout( notif,1000 );
-    setTimeout(function() {
-      $("#loading").hide();
-      $("#login").show();
-    },1000);
-  }
+
+  setTimeout(function() {
+    swal("Pendaftaran Berhasil","selamat pendaftaran mitra peternak telah berhasil","success");
+  },1000);
+
+  redirect = "$(location).attr('href','manajemenPeternak.html')";
+  window.setTimeout( redirect, 2000 );
+
 });
 </script>
 
