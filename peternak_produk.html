@@ -27,6 +27,17 @@
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
+  <style type="text/css">
+    .btn-circle {
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      padding: 6px 0;
+      font-size: 12px;
+      line-height: 1.428571429;
+      border-radius: 15px;
+    }
+  </style>
 
   <!-- =======================================================
     Theme Name: TheEvent
@@ -58,12 +69,11 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="index.html">Beranda</a></li>
-          <li><a data-toggle="dropdown" href="#">Halo Bos Tamtam <i class="fas fa-user"></i></a>
+          <li><a data-toggle="dropdown" href="#">Halo Yoshima <i class="fas fa-user"></i></a>
             <div class="dropdown-menu" style="background-color: #0e1b4d; color: white; padding: 1rem; width: 200px;">
-              <a class="btn btn-link" href="indexManajemen.html" style="padding: 0;">Dashboard</a><br>
-              <a class="btn btn-link" href="manajemenPeternak.html" style="padding: 0;">Akun Peternak</a><br>
-              <a class="btn btn-link" href="manajemenProduk.html" style="padding: 0;">Produk</a><br>
-              <a class="btn btn-link" href="manejemenLaporan.html" style="padding: 0;">Laporan</a><br>
+              <a class="btn btn-link" href="indexPeternak.html" style="padding: 0;">Profil</a><br>
+              <a class="btn btn-link" href="peternak_pesanan.html" style="padding: 0;">Pesanan</a><br>
+              <a class="btn btn-link" href="peternak_produk.html" style="padding: 0;">Produk</a><br>
               <a class="btn btn-link" href="index.html" style="padding: 0;">Logout</a><br>
             </div>
           </li>
@@ -74,36 +84,32 @@
 
   <main id="main">
       <section id="intro" style="height:100%; padding: 2rem; padding-top: 1rem;">
-    <div class="container" style="margin-top:8%;">
+    <div class="container wow fadeIn" style="margin-top:8%;">
     	<div class="row">
     		<div class="col-md-3 ">
-    		  <div class="list-group ">
-            <a href="indexManajemen.html" class="list-group-item list-group-item-action">Dashboard</a>
-            <a href="manajemenPeternak.html" class="list-group-item list-group-item-action">Manajemen Akun Peternak</a>
-            <a href="manajemenProduk.html" class="list-group-item list-group-item-action active" style="background-color:#c3ddeb;border:#c3ddeb">Manajemen Produk</a>
-            <a href="manejemenLaporan.html" class="list-group-item list-group-item-action">Buat Laporan</a>
-          </div>
+    		     <div class="list-group ">
+                  <a href="indexPeternak.html" class="list-group-item list-group-item-action">Profil</a>
+                  <a href="peternak_pesanan.html" class="list-group-item list-group-item-action">Pesanan</a>
+                  <a href="peternak_produk.html" class="list-group-item list-group-item-action active" style="background-color:#c3ddeb;border:#c3ddeb">Produk</a>
+                </div>
     		</div>
-    		<div class="col-md-9 wow fadeIn">
+    		<div class="col-md-9">
     		    <div class="card">
     		        <div class="card-body">
     		            <div class="row">
     		                <div class="col-md-12">
-    		                  <h4>
-                            Manajemen Produk<button type="button" class="btn btn-outline-primary pull-right"  data-toggle="modal" data-target="#tambah">+ Produk</button>
-                          </h4>
-                          <hr>
+    		                    <h4>Produk</h4>
+    		                    <hr>
     		                </div>
     		            </div>
-                    <div class="row">
-                        <div class="col-md-12">
+    		            <div class="row">
+    		                <div class="col-md-12">
                           <table class="table table-bordered">
                             <thead>
                               <tr>
-                                <th ><center>Nama Produk</center></th>
-                                <th ><center>Jenis</center></th>
-                                <th ><center>Deskripsi</center></th>
-                                <th ><center>Ubah</center></th>
+                                <th scope="col-6"><center>Nama Produk</center></th>
+                                <th scope="col-4"><center>Jenis</center></th>
+                                <th scope="col-2" colspan="2"><center>Jumlah</center></th>
                               </tr>
                             </thead>
                             <tbody>
@@ -111,7 +117,7 @@
                                 <td rowspan="2">Susu Original</td>
                                 <td>600 mL</td>
                                 <td>
-                                  Susu sapi segar tersedia dalam 3 pillihan rasa siap minum
+                                  <center>4</center>
                                 </td>
                                 <td>
                                   <center><button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal">Ubah</button></center>
@@ -120,7 +126,7 @@
                               <tr>
                                 <td>1,5 L</td>
                                 <td>
-                                  Susu sapi segar tersedia dalam 3 pillihan rasa siap minum
+                                  <center>4</center>
                                 </td>
                                 <td>
                                   <center><button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal">Ubah</button></center>
@@ -130,7 +136,7 @@
                                 <td rowspan="2">Susu Coklat</td>
                                 <td>600 mL</td>
                                 <td>
-                                  Susu sapi segar tersedia dalam 3 pillihan rasa siap minum
+                                  <center>4</center>
                                 </td>
                                 <td>
                                   <center><button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal">Ubah</button></center>
@@ -139,7 +145,7 @@
                               <tr>
                                 <td>1,5 L</td>
                                 <td>
-                                  Susu sapi segar tersedia dalam 3 pillihan rasa siap minum
+                                  <center>4</center>
                                 </td>
                                 <td>
                                   <center><button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal">Ubah</button></center>
@@ -149,7 +155,7 @@
                                 <td rowspan="2">Susu Stroberi</td>
                                 <td>600 mL</td>
                                 <td>
-                                  Susu sapi segar tersedia dalam 3 pillihan rasa siap minum
+                                  <center>4</center>
                                 </td>
                                 <td>
                                   <center><button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal">Ubah</button></center>
@@ -158,7 +164,7 @@
                               <tr>
                                 <td>1,5 L</td>
                                 <td>
-                                  Susu sapi segar tersedia dalam 3 pillihan rasa siap minum
+                                  <center>4</center>
                                 </td>
                                 <td>
                                   <center><button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal">Ubah</button></center>
@@ -168,7 +174,7 @@
                                 <td rowspan="6">Daging</td>
                                 <td>Has Dalam</td>
                                 <td>
-                                  Daging sapi lokal kaya protein dan zat besi
+                                  <center>3000</center>
                                 </td>
                                 <td>
                                   <center><button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal">Ubah</button></center>
@@ -177,7 +183,7 @@
                               <tr>
                                 <td>Has Luar</td>
                                 <td>
-                                  Daging sapi lokal kaya protein dan zat besi
+                                  <center>2500</center>
                                 </td>
                                 <td>
                                   <center><button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal">Ubah</button></center>
@@ -186,7 +192,7 @@
                               <tr>
                                 <td>Iga</td>
                                 <td>
-                                  Daging sapi lokal kaya protein dan zat besi
+                                  <center>1200</center>
                                 </td>
                                 <td>
                                   <center><button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal">Ubah</button></center>
@@ -195,7 +201,7 @@
                               <tr>
                                 <td>Paha</td>
                                 <td>
-                                  Daging sapi lokal kaya protein dan zat besi
+                                  <center>3200</center>
                                 </td>
                                 <td>
                                   <center><button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal">Ubah</button></center>
@@ -204,7 +210,7 @@
                               <tr>
                                 <td>Brisket</td>
                                 <td>
-                                  Daging sapi lokal kaya protein dan zat besi
+                                  <center>1500</center>
                                 </td>
                                 <td>
                                   <center><button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal">Ubah</button></center>
@@ -213,7 +219,7 @@
                               <tr>
                                 <td>Shank</td>
                                 <td>
-                                  Daging sapi lokal kaya protein dan zat besi
+                                  <center>800</center>
                                 </td>
                                 <td>
                                   <center><button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#exampleModal">Ubah</button></center>
@@ -221,8 +227,8 @@
                               </tr>
                             </tbody>
                           </table>
-                        </div>
-                    </div>
+    		                </div>
+    		            </div>
 
     		        </div>
     		    </div>
@@ -236,62 +242,28 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ubah Informasi Produk</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Ubah Jumlah Produk</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form>
-          <div class="modal-body">
-            <div class="form-group">
-              <label for="nama_produk"><strong>Nama Produk</strong></label>
-              <input type="text" class="form-control" id="nama_produk" aria-describedby="emailHelp" value="Susu segar Original">
-            </div>
-            <div class="form-group">
-              <label for="jenis_produk"><strong>Jenis</strong></label>
-              <input type="text" class="form-control" id="jenis_produk" aria-describedby="emailHelp" value="600 mL">
-            </div>
-            <div class="form-group">
-              <label for="deskripsi"><strong>Deskripsi Produk</strong></label>
-              <textarea class="form-control" id="deskripsi" rows="2">Susu sapi segar tersedia dalam 3 pillihan rasa siap minum</textarea>
-            </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-4"><strong>Nama Produk</strong></div>
+            <div class="col">: Susu Original</div>
           </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Simpan</button>
+          <div class="row">
+            <div class="col-4"><strong>Jenis</strong></div>
+            <div class="col">: 600 mL</div>
           </div>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="tambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ubah Informasi Produk</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <div class="row">
+            <div class="col-4"><strong>Jumlah</strong></div>
+            <div class="col-4"><input type="number" id="publicinfo" name="publicinfo" value="4" class="form-control"></div>
+          </div>
         </div>
-        <form>
-          <div class="modal-body">
-            <div class="form-group">
-              <label for="nama_produk"><strong>Nama Produk</strong></label>
-              <input required="" type="text" class="form-control" id="nama_produk" aria-describedby="emailHelp">
-            </div>
-            <div class="form-group">
-              <label for="jenis_produk"><strong>Jenis</strong></label>
-              <input required="" type="text" class="form-control" id="jenis_produk" aria-describedby="emailHelp">
-            </div>
-            <div class="form-group">
-              <label for="deskripsi"><strong>Deskripsi Produk</strong></label>
-              <textarea required="" class="form-control" id="deskripsi" rows="2"></textarea>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Tambahkan</button>
-          </div>
-        </form>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Simpan</button>
+        </div>
       </div>
     </div>
   </div>
@@ -337,7 +309,7 @@
       <div class="copyright">
         &copy; Copyright <strong>Ternaknesia</strong>. All Rights Reserved
       </div>
-      <div class="credits">
+      <div class="crUbahs">
         <!--
           All the links in the footer should remain intact.
           You can delete the links only if you purchased the pro version.

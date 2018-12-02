@@ -58,7 +58,6 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="index.html">Beranda</a></li>
-          <li><a href="#hotels">Produk</a></li>
           <li><a data-toggle="dropdown" href="#">Halo Bos Tamtam <i class="fas fa-user"></i></a>
             <div class="dropdown-menu" style="background-color: #0e1b4d; color: white; padding: 1rem; width: 200px;">
               <a class="btn btn-link" href="indexManajemen.html" style="padding: 0;">Dashboard</a><br>
@@ -74,7 +73,7 @@
   </header><!-- #header -->
 
   <main id="main">
-      <section id="intro" style="height:900px;">
+      <section id="intro" style="height:100%; padding: 2rem; padding-top: 1rem;">
     <div class="container wow fadeIn" style="margin-top:8%;">
     	<div class="row">
     		<div class="col-md-12">
@@ -82,7 +81,7 @@
     		        <div class="card-body">
     		            <div class="row">
     		                <div class="col-md-12">
-    		                    <h4>Dashboard Statistik</h4>
+    		                    <h4>Tambah Akun Peternak</h4>
     		                    <hr>
     		                </div>
     		            </div>
@@ -90,56 +89,43 @@
     		                <div class="col-md-6">
     		                    <form>
                                   <div class="form-group row">
-                                    <label for="username" class="col-4 col-form-label">Nama Lengkap</label>
+                                    <label for="username" class="col-4 col-form-label">Nama Pemilik</label>
                                     <div class="col-8">
                                       <input id="username" name="username" placeholder="Alam Cahya Nugraha" class="form-control here" required="required" type="text">
                                     </div>
                                   </div>
                                   <div class="form-group row">
-                                    <label for="name" class="col-4 col-form-label">Alamat</label>
-                                    <div class="col-8">
-                                      <input id="name" name="name" placeholder="Keputih Tegal Barat" class="form-control here" type="text">
-                                    </div>
-                                  </div>
-                                  <div class="form-group row">
-                                    <label for="email" class="col-4 col-form-label">No Handphone</label>
-                                    <div class="col-8">
-                                      <input id="email" name="email" placeholder="08152358885" class="form-control here" required="required" type="text">
-                                    </div>
-                                  </div>
-                                  <div class="form-group row">
                                     <label for="publicinfo" class="col-4 col-form-label">Nama Peternakan</label>
                                     <div class="col-8">
-                                      <input type="text" id="publicinfo" name="publicinfo" placeholder="Ternak Alaya Sejahtera"class="form-control"></input>
+                                      <input type="text" id="publicinfo" name="publicinfo" placeholder="Ternak Alaya Sejahtera" class="form-control">
                                     </div>
                                   </div>
-
+                                  <div class="form-group row">
+                                    <label for="name" class="col-4 col-form-label">Alamat</label>
+                                    <div class="col-8">
+                                      <textarea id="publicinfo" name="publicinfo" placeholder="Jalan Mawar Merah no 50 Sukasenang,Surabaya,Indonesia" rows="2" class="form-control"></textarea>
+                                    </div>
+                                  </div>
                             </form>
     		                </div>
                         <div class="col-md-6">
     		                    <form>
-                              <div class="form-group row">
-                                <label for="publicinfo" class="col-4 col-form-label">Pemilik Ternak</label>
-                                <div class="col-8">
-                                  <input type="text" id="publicinfo" name="publicinfo" placeholder="Alam Cahya Nugraha"class="form-control"></input>
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="publicinfo" class="col-4 col-form-label">Password</label>
-                                <div class="col-8">
-                                  <input type="password" id="publicinfo" name="publicinfo" placeholder="08152358885"class="form-control"></input>
-                                </div>
-                              </div>
+                                  <div class="form-group row">
+                                    <label for="email" class="col-4 col-form-label">No Telpon</label>
+                                    <div class="col-8">
+                                      <input id="email" name="email" placeholder="08152358885" class="form-control here" required="required" type="text">
+                                    </div>
+                                  </div>
                               <div class="form-group row">
                                 <label for="publicinfo" class="col-4 col-form-label">Jumlah Sapi</label>
-                                <div class="col-8">
-                                  <input type="text" id="publicinfo" name="publicinfo" placeholder="300"class="form-control"></input>
+                                <div class="col-4">
+                                  <input type="number" id="publicinfo" name="publicinfo" placeholder="300" class="form-control">
                                 </div>
                               </div>
                               <div class="form-group row">
                                 <label for="publicinfo" class="col-4 col-form-label">Jumlah Kambing</label>
-                                <div class="col-8">
-                                  <input type="text" id="publicinfo" name="publicinfo" placeholder="150"class="form-control"></input>
+                                <div class="col-4">
+                                  <input type="number" id="publicinfo" name="publicinfo" placeholder="150" class="form-control">
                                 </div>
                               </div>
                             </form>

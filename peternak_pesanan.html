@@ -50,25 +50,20 @@
         <a href="index.html" class="scrollto"><img src="img/logo.png" alt="" title=""></a>
       </div>
 
+      <form class="form-inline active-cyan-3 active-cyan-4 pull-left" style="padding-left:40px;">
+        <i class="fa fa-search" style="color:white;" aria-hidden="true"></i>
+        <input class="form-control form-control-sm ml-3" style="width:250px;" type="text" placeholder="Cari produk" aria-label="Cari Produk">
+      </form>
+
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li><a href="#intro">Beranda</a></li>
-          <li class="menu-active"><a href="produk.html">Produk</a></li>
-          <li><a href="about.html">Tentang kami</a></li>
-
-          <li><a data-toggle="dropdown" href="#"><i class="fas fa-user"></i></a>
+          <li class="menu-active"><a href="index.html">Beranda</a></li>
+          <li><a data-toggle="dropdown" href="#">Halo Yoshima <i class="fas fa-user"></i></a>
             <div class="dropdown-menu" style="background-color: #0e1b4d; color: white; padding: 1rem; width: 200px;">
-              <form>
-                <div  class="form-group" style="padding: 0.2rem;">
-                  <input id="email" class="form-control" style="padding: 0.5rem;" type="text" name="email" placeholder="email">
-                </div>
-                <div  class="form-group" style="padding: 0.2rem;margin-bottom:5px;">
-                  <input id="password" class="form-control" style="padding: 0.5rem;" type="password" name="password" placeholder="password">
-                </div>
-                <button id="login" type="button" class="btn btn-primary btn-block">Login</button>
-                <button id="loading" type="button" class="btn btn-primary btn-block"><i class='fa fa-spinner fa-spin '></i> Loading</button>
-              </form>
-              <a class="btn btn-link" href="register.html" style="padding: 0;">Belum punya akun?</a>
+              <a class="btn btn-link" href="indexPeternak.html" style="padding: 0;">Profil</a><br>
+              <a class="btn btn-link" href="peternak_pesanan.html" style="padding: 0;">Pesanan</a><br>
+              <a class="btn btn-link" href="peternak_produk.html" style="padding: 0;">Produk</a><br>
+              <a class="btn btn-link" href="index.html" style="padding: 0;">Logout</a><br>
             </div>
           </li>
         </ul>
@@ -77,53 +72,91 @@
   </header><!-- #header -->
 
   <main id="main">
-    <section id="intro" style="height:100%; padding: 2rem; padding-top: 1rem;">
-      <div class="container wow fadeIn" style="margin-top:8%;">
-        <div class="row">
-          <div class="col-md">
-            <div class="card">
-              <div class="card-body" style="padding: 2rem !important;">
-                <div class="row">
-                  <div class="col-md-12">
-                    <h2><b>Susu Segar</b></h2>
-                    <hr>
-                  </div>
+      <section id="intro" style="height:100%; padding: 2rem; padding-top: 1rem;">
+    <div class="container wow fadeIn" style="margin-top:8%;">
+    	<div class="row">
+    		<div class="col-md-3 ">
+    		     <div class="list-group ">
+                  <a href="indexPeternak.html" class="list-group-item list-group-item-action">Profil</a>
+                  <a href="peternak_pesanan.html" class="list-group-item list-group-item-action active" style="background-color:#c3ddeb;border:#c3ddeb">Pesanan</a>
+                  <a href="peternak_produk.html" class="list-group-item list-group-item-action">Produk</a>
                 </div>
-                <div class="row">
-                  <div class="col-md-3">
-                    <img src="img/susu.png" alt="Susu Sapi" style="width: 100%;">
-                  </div>
-                  <div class="col-md">
-                    <h3 id="harga" style="color: green; ">Rp 10.000</h3>
-                    Stok : <b id="stok">9</b><br>
-                    Susu sapi segar tersedia dalam 3 pillihan rasa siap minum<br><br>
-                    <form>
-                      <div class="form-row">
-                        <div class="form-group col-md-2">
-                          <label for="jumlah">Jumlah</label>
-                          <input type="number" min="1" max="50" class="form-control" id="jumlah" value="1">
-                        </div>
-                        <div class="form-group col-md-2">
-                          <label for="inputState">Pilihan ukuran</label>
-                          <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-primary active">
-                              <input type="radio" name="ukuran" id="option1" autocomplete="off" value="gede" checked> 1,5 L
-                            </label>
-                            <label class="btn btn-outline-primary">
-                              <input type="radio" name="ukuran" id="option3" autocomplete="off" value="kecil"> 600 mL
-                            </label>
+    		</div>
+    		<div class="col-md-9">
+    		    <div class="card">
+    		        <div class="card-body">
+    		            <div class="row">
+    		                <div class="col-md-12">
+    		                    <h4>Pesanan</h4>
+    		                    <hr>
+    		                </div>
+    		            </div>
+    		            <div class="row">
+    		                <div class="col-md-12">
+                          <div class="row">
+                            <div class="col-2">
+                              <b>No. Pesanan</b>
+                            </div>
+                            <div class="col-4">
+                              <b>Alamat</b>
+                            </div>
+                            <div class="col-4">
+                              <b>Kode Resi</b>
+                            </div>
+                            <div class="col">
+                              <b>Status</b>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <button type="submit" class="btn btn-success">Tambah ke Pesanan</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+                          <div class="row" style="margin-top: 1rem;">
+                            <div class="col-2">
+                              0112180003
+                            </div>
+                            <div class="col-4">
+                              Wisma Permai 1 no.1, Mulyorejo, Surabaya
+                            </div>
+                            <div class="col-4">
+                              <input type="text" id="resi" name="resi" placeholder="Kode Resi" class="form-control">
+                            </div>
+                            <div class="col">
+                              <button type="submit" class="btn btn-primary">Kirim</button>
+                            </div>
+                          </div>
+                          <div class="row" style="margin-top: 1rem;">
+                            <div class="col-2">
+                              0112180001
+                            </div>
+                            <div class="col-4">
+                              Perumdos Blok J No.8, Sukolilo, Surabaya
+                            </div>
+                            <div class="col-4">
+                              <input type="text" id="resi" name="resi" placeholder="Kode Resi" class="form-control">
+                            </div>
+                            <div class="col">
+                              <button type="submit" class="btn btn-primary">Kirim</button>
+                            </div>
+                          </div>
+                          <div class="row" style="margin-top: 1rem;">
+                            <div class="col-2">
+                              2811180016
+                            </div>
+                            <div class="col-4">
+                              Ds. Sidowayah RT 06/ RW 03, Rembang
+                            </div>
+                            <div class="col-4">
+                              BKIG300538927726
+                            </div>
+                            <div class="col">
+                              Terkirim
+                            </div>
+                          </div>
+    		                </div>
+    		            </div>
+
+    		        </div>
+    		    </div>
+    		</div>
+    	</div>
+    </div>
     </section>
   </main>
 
@@ -199,20 +232,29 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
-
-  <script type="text/javascript">
-    $('input:radio[name="ukuran"]').change(
-    function(){
-        if (this.checked && this.value == 'gede') {
-          document.getElementById("harga").innerHTML = "Rp 10.000";
-          document.getElementById("stok").innerHTML = "9";
-        }
-        else if (this.checked && this.value == 'kecil') {
-          document.getElementById("harga").innerHTML = "Rp 5.000";
-          document.getElementById("stok").innerHTML = "24";
-        }
-    });
-  </script>
 </body>
+
+<script type="text/javascript">
+$("#loading").hide();
+$( "#login" ).click(function() {
+  $("#login").hide();
+  $("#loading").show();
+  if ($('#email').val() == "peternak@peternak" && $('#password').val() == "peternak") {
+    redirect = "$(location).attr('href','indexPeternak.html')";
+    window.setTimeout( redirect, 1000 );
+  }
+  else if ($('#email').val() != "" && $('#password').val() != "") {
+    redirect = "$(location).attr('href','indexPelanggan.html')";
+    window.setTimeout( redirect, 1000 );
+  }else {
+    notif = 'swal("Login gagal","password atau username salah","error")';
+    window.setTimeout( notif,1000 );
+    setTimeout(function() {
+      $("#loading").hide();
+      $("#login").show();
+    },1000);
+  }
+});
+</script>
 
 </html>
