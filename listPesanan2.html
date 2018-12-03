@@ -56,10 +56,10 @@
           <li><a href="indexPelanggan.html">Beranda</a></li>
           <li><a href="produk.html">Produk</a></li>
           <li><a href="about.html">Tentang kami</a></li>
-          <li class="menu-active"><a data-toggle="dropdown" href="#" style="color: yellow">(1)Halo Alam <i class="fas fa-user"></i></a>
+          <li class="menu-active"><a data-toggle="dropdown" href="#">Halo Alam <i class="fas fa-user"></i></a>
             <div class="dropdown-menu" style="background-color: #0e1b4d; color: white; padding: 1rem; width: 200px;">
               <a class="btn btn-link" href="profil.html" style="padding: 0;">Profil</a><br>
-              <a class="btn btn-link" href="listPesanan.html" style="padding: 0; color: yellow;">(1)Pesanan Anda</a><br>
+              <a class="btn btn-link" href="listPesanan.html" style="padding: 0;">Pesanan Anda</a><br>
               <a class="btn btn-link" href="index.html" style="padding: 0;">Logout</a><br>
             </div>
           </li>
@@ -76,45 +76,42 @@
         <div class="row">
 
           <div class="row" style="margin: 5px;">
-            <div class="col-md-2">
-              <img class="img-thumbnail float-left" src="img/susu.png"> </div>
-            <div class="col-md-6">
-              <h3 style="color: white;">SUSU SEGAR COKLAT</h3>
-              <p class="text-justify">600 mL</p> 
-              <table>
-                <tbody>
-                  <tr>
-                    <td>
-                      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Batalkan Pesanan</button>
-                    </td>
-                    <td>
-                      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#konfirmasi" style="margin-left: 1rem;">Konfirmasi Pembayaran</button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+          <div class="col-md-2">
+            <img class="img-thumbnail float-left" src="img/susu.png"> </div>
+          <div class="col-md-6">
+            <h3 style="color: white;">SUSU SEGAR COKLAT</h3>
+            <p class="text-justify">600 mL</p> 
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    Status : Sudah dibayar<br>
+                    Menunggu Pesanan
+                  </td>
+            <td>
+            </td>
+            </tr></tbody></table>
+          </div>
 
-            <div class="col-md-2 panel panel-default">
-              <table class="table" style="border-radius: 6px;">
-                <thead class="thead-light" style="text-align: center;">
-                  <tr><th>Jumlah</th></tr>
-                </thead>
-                <tbody class="bg-warning" style="color: black; font-weight: 600;">
-                  <tr><td>10</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="col-md-2">
-              <table class="table">
-                <thead class="thead-light" style="text-align: center;">
-                  <tr><th>Total Biaya</th></tr>
-                </thead>
-                <tbody class="bg-warning" style="color: black; font-weight: 600;">
-                  <tr rows="3"><td>Rp. 62.000,-</td></tr>
-                </tbody>
-              </table>
-            </div>
+          <div class="col-md-2 panel panel-default">
+            <table class="table" style="border-radius: 6px;">
+              <thead class="thead-light" style="text-align: center;">
+                <tr><th>Jumlah</th></tr>
+              </thead>
+              <tbody class="bg-warning" style="color: black; font-weight: 600;">
+                <tr><td>5</td></tr>
+              </tbody>
+            </table></div>
+          <div class="col-md-2">
+            <table class="table">
+              <thead class="thead-light" style="text-align: center;">
+                <tr><th>Total Biaya</th></tr>
+              </thead>
+              <tbody class="bg-warning" style="color: black; font-weight: 600;">
+                <tr rows="3"><td>Rp. 62.000,-</td></tr>
+              </tbody>
+            </table>
+          </div>
           </div>
         </div>
       </div>
@@ -122,51 +119,6 @@
   </section>
 </main>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Membatalkan Pesanan</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Apakah Anda yakin mem<strong>batal</strong>kan pesanan ini?</p>
-      </div>
-      <div class="modal-footer">
-        <form>
-          <button type="submit" class="btn btn-primary">Ya</button>
-        </form>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="konfirmasi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Konfirmasi Pembayaran</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <form action="listPesanan2.html">
-        <div class="modal-body">
-          <p>Masukkan bukti pembayran Anda</p>
-          <div class="form-group">
-            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-primary">Kirim</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
   <!--==========================
     Footer
   ============================-->

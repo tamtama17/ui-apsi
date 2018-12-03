@@ -54,10 +54,10 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li><a href="index.html">Beranda</a></li>
-          <li><a href="#hotels">Produk</a></li>
+          <li class="menu-active"><a href="produk.html">Produk</a></li>
           <li><a href="about.html">Tentang kami</a></li>
 
-          <li class="menu-active"><a data-toggle="dropdown" href="#"><i class="fas fa-user"></i></a>
+          <li><a data-toggle="dropdown" href="#"><i class="fas fa-user"></i></a>
             <div class="dropdown-menu" style="background-color: #0e1b4d; color: white; padding: 1rem; width: 200px;">
               <form>
                 <div  class="form-group" style="padding: 0.2rem;">
@@ -78,78 +78,23 @@
   </header><!-- #header -->
 
 <main id="main">
-  <section id="intro" style="height:120vh;">
+  <section id="intro" style="height:100vh;">
     <div class="intro-container wow fadeIn">
         <div class="row main" style="text-align:left;">
-          <div class="main-login"  style="background-color:white;padding:25px;width:500px;">
-            <h5 style="text-align:center;"><b>Informasi Produk</b></h5>
-              <form class="" method="post" action="">
-                <div class="form-group">
-                  <label for="username" class="cols-sm-2 control-label">Nama Lengkap</label>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
-                    </div>
-                    <input required type="text" name="username" class="form-control" placeholder="Nama Lengkap" aria-label="Username" aria-describedby="basic-addon1">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="email" class="cols-sm-2 control-label">Email</label>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                    </div>
-                    <input required type="text" name="email" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="password" class="cols-sm-2 control-label">Password</label>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1"><i class="fa fa-lock fa" aria-hidden="true"></i></span>
-                    </div>
-                    <input required type="password" name="password" class="form-control" placeholder="password" aria-label="Username" aria-describedby="basic-addon1">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="password2" class="cols-sm-2 control-label">konfirmasi password</label>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1"><i class="fa fa-lock fa" aria-hidden="true"></i></span>
-                    </div>
-                    <input required type="password" name="password2" class="form-control" placeholder="konfirmasi password anda" aria-label="Username" aria-describedby="basic-addon1">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="alamat" class="cols-sm-2 control-label">Alamat</label>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1"><i class="fa fa-address-book fa" aria-hidden="true"></i></span>
-                    </div>
-                    <input required type="textarea" name="alamat" class="form-control" placeholder="alamat anda" aria-label="Username" aria-describedby="basic-addon1">
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label for="nohp" class="cols-sm-2 control-label">No Handphone</label>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
-                    </div>
-                    <input required type="text" name="nohp" class="form-control" placeholder="nomor handphone" aria-label="Username" aria-describedby="basic-addon1">
-                  </div>
-                </div>
-
-                <div class="form-group ">
-                  <button id="ubah" type="button" class="btn btn-success btn-lg btn-block">Ubah</button>
-                </div>
-
-              </form>
-  </div>
+          <div class="main-login"  style="background-color:white;padding:25px;width:800px;">
+            <h5 style="text-align:center;"><b>Kode Transaksi</b></h5>
+            <div style="width: 100%; text-align: center;">
+              <h1 style="color:#16d9e8;font-family:'Arial';">A9JWO98RJWI49</h1>
+            </div>
+            <div style="width: 100%; text-align: center;">
+              <h6 style="font-family:'Arial';">Segera lakukan pembayaran kurang dari 24 Jam. Agar pemesanan anda dapat kami proses lebih lanjut.</h1>
+            </div>
+            <div class="mx-auto" style="width: 40%;">
+              <a href="listPesanan.html">
+                <button type="button" class="btn btn-primary btn-block" name="button">Ok</button>
+              </a>
+            </div>
+          </div>
 </div>
       </div>
   </section>
@@ -229,9 +174,9 @@
 </body>
 
 <script type="text/javascript">
-  $( "#ubah" ).click(function() {
-    swal("Pengubahan Berhasil","Informasi produk berhasil diubah","success");
-    redirect = "$(location).attr('href','produk.html')";
+  $( "#pesan" ).click(function() {
+    swal("Pesanan Berhasil","Silahkan menyelesaikan pembayaran pemesanan","success");
+    redirect = "$(location).attr('href','listPesanan.html')";
     window.setTimeout( redirect, 1000 );
 
   });
